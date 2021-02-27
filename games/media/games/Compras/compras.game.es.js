@@ -34,29 +34,10 @@ undum.game.situations = {
         <p>Era un dia luminoso, Alberto se levanto de la cama con una sensacion\
         bastante rara, tenia hambre. Se dispuso a levantarse de la cama \
         y dirigirse a la cocina para comer algo. Pero algo no iba del todo bien,\
-        Cuando abrio la nevera se encontro una terrible sorpresa, no tenia </p>\
-        <p class='transient'>Click <a href='hub'>this link to\
-        continue...</a></p>"
+        Cuando abrio la nevera se encontro una terrible sorpresa, no tenia nada... </p>\
+        <p class='transient'> <a href='despierto'>Continuar</a></p>"
     ),
 
-    quehacer: new undum.SimpleSituation(
-
-      "<div id='hub' class='situation' data-choices='#topic'\
-             data-option-text='View Topic List'>\
-          <h1 class='transient'>Topics</h1>\
-          <p class='transient'>Choose a topic to find out about next. If\
-            in doubt, go through the topics in order.</p>\
-        </div>\
-        <div id='implicit' class='situation' data-tags='topic'\
-             data-heading='Implicit Choices' data-display-order='7'\
-             data-choices='#example'></div>\
-             <div id='example-choices' class='situation' data-choices='#example'>\
-               <p class='transient'>You can return to the\
-                 <a href='hub'>Topic List</a> or choose another option from\
-                 this example:</p>\
-        </div>"
-
-    ),
 
     // NB: The 'hub' situation which is the main list of topics, is
     // defined wholly in the HTML file, and doesn't have an entry in
@@ -75,25 +56,53 @@ undum.game.situations = {
         displayOrder: 1
     }),
     todo: new undum.SimpleSituation(
-        "<p>Alberto cogio dinero del cajón y se dispuso a ir a comprar la comida que\
-        le faltaba</p>",
+        "<p class='transient'>Alberto cogio dinero del cajón y se dispuso a ir a comprar la comida que\
+        le faltaba y se dirigio a comprar algo que le quitara esa angustiosa sensacion. Al cabo de un rato\
+        ya se encontraba en el\
+        <a href='compras'>supermercado</a></p>",
         {
           heading: "Ir a comprar",
           diplayOrder: 1,
-          tags: ["topic"]
+          tags: ["despierto"]
         }
     ),
-    links: new undum.SimpleSituation(
-
-        "<p>Alberto se volvio a la cama y intento conciliar el sueño sin muchos\
-        resultados, tras un rato intentando dormirse vuelve a levantarse con mucha hambre<a href='hub'>¿Que hara ahora Alberto?</a></p>\
-        ",
+    volvercama: new undum.SimpleSituation(
+        "<p class='transient'>Alberto se volvio a la cama y intento conciliar el sueño sin muchos\
+        resultados, tras un rato intentando dormirse vuelve a levantarse con mucha hambre<a href='despierto'>¿Que hara ahora Alberto?</a></p>",
         {
             heading: "Volverse a la cama",
-            diplayOrder: 2,
-            tags: ["topic"]
+            diplayOrder: 3,
+            tags: ["despierto"]
+
         }
     ),
+
+    volvercasa: new undum.SimpleSituation(
+        "<p class='transient'>Alberto se volvio a la casa sin saber muy bien que habia pasado\
+         tenia la sensación de que alguien tomaba las decisionies por el, pero lo peor de todo era\
+         que seguía tenidendo hambre, sin pensarlo mucho Alberto estaba donde comenzó todo...\
+           <a href='despierto'>¿y ahora que?</a></p>",
+        {
+            heading: "Volver a la casa",
+            diplayOrder: 1,
+            tags: ["compras"]
+
+        }
+    ),
+    pagar: new undum.SimpleSituation(
+        "<p class='transient'>Alberto se dispuso a pagar la compra por fin podria quitarse esa\
+        sensación tan desagradable. La cajera le indico que la suma total era de 10 euros, Alberto miro con preocupacion\
+        cuanto llevaba peor por suerte llevaba 10 eruos justos. Uff para la proxima vez debía de mirar cuanto llevaba.\
+        Tras comprar se dirigio a toda prisa a casa para poder aplacar ese hambre, esta era la ultima vez que no planificaba\
+        la compra semanal.</p> <h1> FIN </h1>",
+        {
+            heading: "Pagar en caja",
+            diplayOrder: 1,
+            tags: ["compras"]
+
+        }
+    ),
+
     sticky: new undum.SimpleSituation(
         "<p>There are three types of link in Undum. The first two we've seen\
         in previous topics:\
@@ -413,6 +422,9 @@ undum.game.qualities = {
     luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
         "<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Luck</span>",
         {priority:"0003", group:'stats'}
+    ),
+    Dinero: new undum.IntegerQuality(
+        "Dinero", {priority:"0003", group:'stats'}
     ),
 
     inspiration: new undum.NonZeroIntegerQuality(

@@ -48,9 +48,10 @@
     <div id="page">
 
       <div id="tools_wrapper">
+          <!--
         <div id="info_panel" class="tools left">
 
-          <!-- Game Background: edit this -->
+
           <h1>Undum</h1>
           <p>
             Undum is a pure client-side game framework for narrative
@@ -58,15 +59,15 @@
             CSS&#x200A;3. You can read more and download the source
             code <a href="http://github.com/idmillington/undum">here</a>.
           </p>
-          <!-- End of Game Background -->
+
 
           <div class='buttons'>
             <button id="save">Save</button><button id="erase">Erase</button>
           </div>
         </div>
-
+-->
         <div id="character_panel" class="tools right">
-          <h1>Character</h1>
+          <h1>Personaje</h1>
           <div id="character">
             <div id="character_text">
               <div id="character_text_content"></div>
@@ -194,11 +195,19 @@
       </div>
 
       <!-- Some situations defined entirely in the HTML -->
-      <div id="hub" class="situation" data-choices="#topic"
+      <div id="despierto" class="situation" data-choices="#despierto"
            data-option-text="View Topic List">
-        <h1 class="transient">Topics</h1>
-        <p class="transient">Choose a topic to find out about next. If
-          in doubt, go through the topics in order.</p>
+        <h1 class="transient">Elecciones</h1>
+        <p class="transient">Alberto debe elegir entre estas opciones ¿Qué debería
+        hacer?</p>
+      </div>
+
+      <div id="compras" class="situation" data-choices="#compras" data-display-order="2"
+           data-option-text="View Topic List">
+        <h1 class="transient">Comprando</h1>
+        <p class="transient">Alberto entra en el supermercado y empieza a llenar
+        la cesta con la lista de la compra cuando cree que la tiene piensa...
+        ¿Qué debo hacer ahora?</p>
       </div>
 
       <div id="implicit" class="situation" data-tags="topic"
@@ -228,7 +237,6 @@
           <span class="transient">So here is an example of
           automatic options that may change:</span></p>
       </div>
-
       <div id="example-choices" class="situation" data-choices="#example">
         <p class="transient">You can return to the
           <a href='hub'>Topic List</a> or choose another option from
