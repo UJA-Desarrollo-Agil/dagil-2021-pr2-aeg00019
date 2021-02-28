@@ -12,6 +12,7 @@ body {
 }
 #mid_panel {
     margin: 0;
+    border-radius: 20px;
 }
 
 /* Title */
@@ -121,5 +122,3 @@ body {
     display: block;
     padding: 10px 20px;
 }
-
-

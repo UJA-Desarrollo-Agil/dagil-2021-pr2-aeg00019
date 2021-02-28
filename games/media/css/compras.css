@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+p {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size:20px;
+}
+h1{
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  color: white;
+  opacity: 100%;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+h2{
+  color: white;
+  font-family: 'DotGothic16', sans-serif;
+  font-size:10px;
+}
+a {
+    background-color: black;
+    border-radius: 5px;
+    font-family: 'DotGothic16', sans-serif;
+    color: white;
+    padding-left:5px;
+    padding-right:5px;
+    border-bottom: 2px solid transparent;
+}
+a.raw {
+    padding-right: 14px;
+    background: transparent url("../img/external_link.png") no-repeat right 4px;
+}
+a:hover {
+
+    color: yellow;
+}

@@ -34,8 +34,8 @@ undum.game.situations = {
         <p>Era un dia luminoso, Alberto se levanto de la cama con una sensacion\
         bastante rara, tenia hambre. Se dispuso a levantarse de la cama \
         y dirigirse a la cocina para comer algo. Pero algo no iba del todo bien,\
-        Cuando abrio la nevera se encontro una terrible sorpresa, no tenia nada... </p>\
-        <p class='transient'> <a href='despierto'>Continuar</a></p>"
+        Cuando abrio la nevera se encontro una terrible sorpresa, no tenia nada...\
+        <a href='despierto'>Continuar</a></p>"
     ),
 
 
