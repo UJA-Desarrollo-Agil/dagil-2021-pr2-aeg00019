@@ -616,7 +616,7 @@
      * after the element that matches that selector.
      */
     System.prototype.writeHeading = function(headingContent, elementSelector) {
-        var heading = $("<h1>").html(headingContent);
+        var heading = $("<h1 class=\"transient\">").html(headingContent);
         doWrite(heading, elementSelector, 'append', 'after');
     };
 

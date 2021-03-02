@@ -30,11 +30,11 @@ undum.game.slideUpSpeed = 500
 undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Era por la mañana</h1>\
-        <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
-        <p>Era un dia luminoso, Alberto se levanto de la cama con una sensacion\
+        <img src='media/games/Compras/1.png'  class='float_right' style=\"max-width: 100%;\">\
+        <p>Era un día nublado, Alberto se levantó de la cama con una sensación\
         bastante rara, tenia hambre. Se dispuso a levantarse de la cama \
         y dirigirse a la cocina para comer algo. Pero algo no iba del todo bien,\
-        Cuando abrio la nevera se encontro una terrible sorpresa, no tenia nada...\
+        Cuando abrió la nevera se encontró una terrible sorpresa, no tenia nada para llevarse a la boca...\
         <a href='despierto'>Continuar</a></p>"
     ),
 
@@ -56,19 +56,26 @@ undum.game.situations = {
         displayOrder: 1
     }),
     todo: new undum.SimpleSituation(
-        "<p class='transient'>Alberto cogio dinero del cajón y se dispuso a ir a comprar la comida que\
+        "<img src='media/games/Compras/2.png'  class='float_right transient' style=\"max-width: 70%;\"><p class='transient'>Alberto cogio dinero del cajón y se dispuso a ir a comprar la comida que\
         le faltaba y se dirigio a comprar algo que le quitara esa angustiosa sensacion. Al cabo de un rato\
         ya se encontraba en el\
         <a href='compras'>supermercado</a></p>",
         {
+
           heading: "Ir a comprar",
           diplayOrder: 1,
-          tags: ["despierto"]
+          tags: ["despierto"],
+
+          exit: function(character, system, to) {
+              system.setQuality("dinero", character.qualities.dinero+10);
+          }
+
         }
+
     ),
     volvercama: new undum.SimpleSituation(
-        "<p class='transient'>Alberto se volvio a la cama y intento conciliar el sueño sin muchos\
-        resultados, tras un rato intentando dormirse vuelve a levantarse con mucha hambre<a href='despierto'>¿Que hara ahora Alberto?</a></p>",
+        "<img src='media/games/Compras/3.png'  class='float_right transient' style=\"max-width: 50%;\"><p class='transient'>Alberto se volvió a la cama e intento conciliar el sueño sin muchos\
+        resultados, tras un rato intentando dormirse vuelve a levantarse con mucha hambre<a href='despierto'>¿Que hará ahora Alberto?</a></p>",
         {
             heading: "Volverse a la cama",
             diplayOrder: 3,
@@ -78,9 +85,9 @@ undum.game.situations = {
     ),
 
     volvercasa: new undum.SimpleSituation(
-        "<p class='transient'>Alberto se volvio a la casa sin saber muy bien que habia pasado\
-         tenia la sensación de que alguien tomaba las decisionies por el, pero lo peor de todo era\
-         que seguía tenidendo hambre, sin pensarlo mucho Alberto estaba donde comenzó todo...\
+        "<p >Alberto se volvió a la casa sin saber muy bien que había pasado\
+         tenia la sensación de que alguien tomaba las decisiones por el, pero lo peor de todo era\
+         que seguía teniendo hambre, sin pensarlo mucho Alberto estaba donde comenzó todo...\
            <a href='despierto'>¿y ahora que?</a></p>",
         {
             heading: "Volver a la casa",
@@ -90,9 +97,9 @@ undum.game.situations = {
         }
     ),
     pagar: new undum.SimpleSituation(
-        "<p class='transient'>Alberto se dispuso a pagar la compra por fin podria quitarse esa\
+        "<p>Alberto se dispuso a pagar la compra por fin podria quitarse esa\
         sensación tan desagradable. La cajera le indico que la suma total era de 10 euros, Alberto miro con preocupacion\
-        cuanto llevaba peor por suerte llevaba 10 eruos justos. Uff para la proxima vez debía de mirar cuanto llevaba.\
+        cuanto llevaba peor por suerte llevaba 10 euros justos. Para la proxima vez debía de mirar cuanto llevaba.\
         Tras comprar se dirigio a toda prisa a casa para poder aplacar ese hambre, esta era la ultima vez que no planificaba\
         la compra semanal.</p> <h1> FIN </h1>",
         {
@@ -413,26 +420,11 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-    skill: new undum.IntegerQuality(
-        "Skill", {priority:"0001", group:'stats'}
-    ),
-    stamina: new undum.NumericQuality(
-        "Stamina", {priority:"0002", group:'stats'}
-    ),
-    luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
-        "<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Luck</span>",
-        {priority:"0003", group:'stats'}
-    ),
-    Dinero: new undum.IntegerQuality(
-        "Dinero", {priority:"0003", group:'stats'}
+
+    dinero: new undum.NumericQuality(
+        "Dinero", {priority:"0002", group:'stats'}
     ),
 
-    inspiration: new undum.NonZeroIntegerQuality(
-        "Inspiration", {priority:"0001", group:'progress'}
-    ),
-    novice: new undum.OnOffQuality(
-        "Novice", {priority:"0002", group:'progress', onDisplay:"&#10003;"}
-    )
 };
 
 // ---------------------------------------------------------------------------
@@ -450,10 +442,6 @@ undum.game.qualityGroups = {
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function(character, system) {
-    character.qualities.skill = 12;
-    character.qualities.stamina = 12;
-    character.qualities.luck = 0;
-    character.qualities.novice = 1;
-    character.qualities.inspiration = 0;
-    system.setCharacterText("<p>You are starting on an exciting journey.</p>");
+    character.qualities.dinero = 0;
+    system.setCharacterText("<p>Todo lo que Alberto lleva en los bolsillos.</p>");
 };
