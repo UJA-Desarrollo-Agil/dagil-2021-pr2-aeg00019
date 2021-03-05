@@ -55,9 +55,9 @@ undum.game.situations = {
         optionText: "What Undum Games are Made Of",
         displayOrder: 1
     }),
-    todo: new undum.SimpleSituation(
-        "<img src='media/games/Compras/2.png'  class='float_right transient' style=\"max-width: 70%;\"><p class='transient'>Alberto cogio dinero del cajón y se dispuso a ir a comprar la comida que\
-        le faltaba y se dirigio a comprar algo que le quitara esa angustiosa sensacion. Al cabo de un rato\
+    iracomprar: new undum.SimpleSituation(
+        "<img src='media/games/Compras/2.png'  class='float_right transient' style=\"max-width: 70%;\"><p class='transient'>Alberto cogió dinero del cajón y se dispuso a ir a comprar la comida que\
+        le faltaba, la sensación de tener hambre no era muy agradable así que se preparó rapidamente y salió como una flecha por la puerta de su casa. Al cabo de un rato\
         ya se encontraba en el\
         <a href='compras'>supermercado</a></p>",
         {
@@ -97,9 +97,9 @@ undum.game.situations = {
         }
     ),
     pagar: new undum.SimpleSituation(
-        "<p>Alberto se dispuso a pagar la compra por fin podria quitarse esa\
-        sensación tan desagradable. La cajera le indico que la suma total era de 10 euros, Alberto miro con preocupacion\
-        cuanto llevaba peor por suerte llevaba 10 euros justos. Para la proxima vez debía de mirar cuanto llevaba.\
+        "<p>Alberto se dispuso a pagar la compra por fin podría quitarse esa\
+        sensación tan desagradable. La cajera le indico que la suma total era de 10 euros, Alberto miro con preocupación\
+        cuanto llevaba pero por suerte llevaba 10 euros justos. Para la próxima vez debía de mirar cuanto llevaba.\
         Tras comprar se dirigio a toda prisa a casa para poder aplacar ese hambre, esta era la ultima vez que no planificaba\
         la compra semanal.</p> <h1> FIN </h1>",
         {

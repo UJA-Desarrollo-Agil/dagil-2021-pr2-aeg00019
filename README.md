@@ -14,12 +14,12 @@ En este juego podréis interactura conmigo como protagonista de esta pequeña hi
 - Intermedia
 ![Alt text](/Imagenes_Doc/Trello_intermedio.png?raw=true "Trello_Intermedio")
 
-
 - Final
-## Telegram
+![Alt text](/Imagenes_Doc/Trello_final.png?raw=true "Trello_Final")
 
+## Telegram
 ### Github
-![Alt text](/Imagenes_Doc/trello.png?raw=true "Trello")
+![Alt text](/Imagenes_Doc/github.png?raw=true "Github")
 
 ### Trello
-![Alt text](/Imagenes_Doc/github.png?raw=true "Github")
+![Alt text](/Imagenes_Doc/trello.png?raw=true "Trello")
