@@ -1,6 +1,6 @@
 # Una mañana con hambre
 
-En este juego podréis interactura conmigo como protagonista de esta pequeña historia. **El objetivo principal de este juego es hacer que salga a comprar algo que pueda quitarme el hambre y pueda continuar mi dia con normalidad.**
+En este juego podréis interactura conmigo como protagonista de esta pequeña historia. **El objetivo principal de este juego es hacer que salga a comprar algo que pueda quitarme el hambre y pueda continuar mi dia con normalidad.**Intenta que no acabe en el hospital, conforme vaya pasando el tiempo en la historia iré perdiendo salud, intenta que no tenga que ir al hospital.
 
 
 ## Trello

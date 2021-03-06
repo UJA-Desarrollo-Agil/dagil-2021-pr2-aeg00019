@@ -73,6 +73,7 @@ background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, F
 #title h1 span.fancy {
     font-size: 2.5em;
     line-height: 0;
+
     font-family: 'DotGothic16', sans-serif;
     font-style: italic;
     margin: 0 -0.2em;
@@ -82,13 +83,14 @@ background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, F
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 10px;
     position: absolute;
     color: yellow;
     font-size: 0.9em;
     font-family: 'DotGothic16', sans-serif;
     font-style: italic;
     text-align: center;
-    color: #987;
+
 }
 #title .noscript_message {
     left: 0;
@@ -339,15 +341,14 @@ img.float_left {
 }
 .progress_bar_track {
     z-index: 100;
-    background: rgba(255,255,255,0.25);
-    border: 2px solid #876;
+    border: 2px solid white;
     height: 0.75em;
-    width: 27.7em;
+    width: auto;
     clear: both;
     border-radius: 4px;
 }
 .progress_bar_color {
-    background: #987;
+    background: yellow;
     width: 0;
     height: 0.75em;
 }
